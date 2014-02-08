@@ -43,7 +43,16 @@
       </div>
     </nav>
     <div class="container">
-      {{ content }}
+      <div class="row">
+        <div class="col-md-9">
+          {{ content }}    
+        </div>
+        <div class="col-md-3">
+          {% assign posts_collate = site.posts %}
+          {% include JB/posts_collate %}
+        </div>
+      </div>
+      
       <hr>
       <footer>
         <p>
